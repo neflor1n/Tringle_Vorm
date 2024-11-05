@@ -9,6 +9,14 @@ namespace Tringle_Vorm
 
     class Tringle
     {
+        public double a, b, c, h;
+
+        public Tringle() { }
+        public Tringle(double A) { a = A; b = A; c = A; }
+        public Tringle (double A, double H)
+        {
+            a = A; h = H;
+        }
 
         public Tringle(double A, double B, double C)
         {
@@ -16,12 +24,15 @@ namespace Tringle_Vorm
             b = B;
             c = C;
         }
-        public double a, b, c;
+        
         public string outputA()
         {
             return Convert.ToString(a);
         }
-
+        public string outputH()
+        {
+            return Convert.ToString(h);
+        }
         public string outputB()
         {
             return Convert.ToString(b);
@@ -39,6 +50,9 @@ namespace Tringle_Vorm
             return p;
 
         }
+
+
+        
 
         public double Surface()
         {
@@ -76,6 +90,23 @@ namespace Tringle_Vorm
                     return false;
                 else return true;
             }
+        }
+        public double Surface2()
+        {
+            return 0.5 * a * h; // Площадь треугольника: 0.5 * основание * высота
+        }
+
+        public bool ExistTriange2()
+        {
+            // Простейшее условие существования треугольника
+            return (a > 0 && h > 0);
+        }
+
+        public double Height()
+        {
+            double p = (a + b + c) / 2;
+            double area = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+            return (2 * area) / a;
         }
 
         private void Tringle_Load(object sender, EventArgs e)
