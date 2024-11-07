@@ -14,7 +14,6 @@ namespace Tringle_Vorm
     {
         Button btn;
         ListView listView;
-        System.Drawing.Image[] img;
         double h, a;
         TextBox txtA, txtH;
         public Form2() 
@@ -103,6 +102,9 @@ namespace Tringle_Vorm
                 }
 
                 Tringle triangle = new Tringle(a, h);
+
+
+
 
                 listView.Items.Add("Külg A");
                 listView.Items.Add("Kõrgus");

@@ -86,9 +86,8 @@ namespace Tringle_Vorm
         {
             get
             {
-                if ((a > b + c) && (b > a + c) && (c > a + b))
-                    return false;
-                else return true;
+                // Проверка положительности сторон и выполнения условий существования
+                return a > 0 && b > 0 && c > 0 && (a + b > c) && (a + c > b) && (b + c > a);
             }
         }
         public double Surface2()
