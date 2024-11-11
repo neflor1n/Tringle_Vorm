@@ -86,18 +86,18 @@ namespace Tringle_Vorm
         {
             get
             {
-                // Проверка положительности сторон и выполнения условий существования
+                // Проверка положительности сторон и выполнения условий существования - Positiivsete külgede ja olemasolutingimuste täitmise kontrollimine
                 return a > 0 && b > 0 && c > 0 && (a + b > c) && (a + c > b) && (b + c > a);
             }
         }
         public double Surface2()
         {
-            return 0.5 * a * h; // Площадь треугольника: 0.5 * основание * высота
+            return 0.5 * a * h; // Площадь треугольника: 0.5 * основание * высота - Kolmnurga pindala: 0,5 * alus * kõrgus
         }
 
         public bool ExistTriange2()
         {
-            // Простейшее условие существования треугольника
+            // Простейшее условие существования треугольника - Kolmnurga olemasolu lihtsaim tingimus
             return (a > 0 && h > 0);
         }
 
